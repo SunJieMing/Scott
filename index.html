@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Tessellate 1.0 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Andrew Scott James</title>
@@ -12,7 +7,10 @@
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic" rel="stylesheet" type="text/css" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-
+		<script src="js/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="css/skel-noscript.css" />
@@ -26,8 +24,11 @@
 
 		<!-- Header -->
 <nav class="navbar navbar-default navbar-fixed-bottom" id="top-bar"role="navigation">
-  <div class="container">
-    ...
+  <div class="nav-container">
+    <a href="index.html">Home</a> &nbsp;
+    <a href="film.html">Film</a> &nbsp;
+    <a href="design.html">Design</a> &nbsp;
+    <a href="performance.html">Performance</a> &nbsp;
   </div>
 </nav>
 
@@ -55,27 +56,27 @@
 						<div class="row">
 							<div class="4u">
 								<section>
-									<a href="http://www.bbc.com" class="feature-icon"><span class="fa fa-film"></span></a>
+									<a href="film.html" class="feature-icon"><span class="fa fa-film"></span></a>
 									<header>
-										<h3>Film</h3>
+										<h3><a href="film.html">Film</a></h3>
 									</header>
 									<p>Here are some of the sweet wedding videos that I have made.</p>
 								</section>
 							</div>
 							<div class="4u">
 								<section>
-									<a href="http://www.macrumors.com" class="feature-icon"><span class="fa fa-thumbs-o-up"></span></a>
+									<a href="performance.html" class="feature-icon"><span class="fa fa-thumbs-o-up"></span></a>
 									<header>
-										<h3>Performance</h3>
+										<h3><a href="performance.html">Performance</a></h3>
 									</header>
 									<p>Here are some of the different plays that I have performed in.</p>
 								</section>
 							</div>
 							<div class="4u">
 								<section>
-									<a href="http://www.gametrailers.com" class="feature-icon"><span href="www.bbc.com" class="fa fa-desktop"></span></a>
+									<a href="design.html" class="feature-icon"><span class="fa fa-desktop"></span></a>
 									<header>
-										<h3>Design</h3>
+										<h3><a href="design.html">Design</a></h3>
 									</header>
 									<p>Here are some cool logos that I have designed.  I am also freakin' awesome with Photoshop.</p>
 								</section>
@@ -83,9 +84,7 @@
 						</div>
 						<div class="row">
 							<div class="12u">
-								<footer>
-									<a href="#second" class="button scrolly">Work Experience</a>
-								</footer>
+
 							</div>
 						</div>
 					</div>
@@ -94,12 +93,23 @@
 
 		<!-- Second -->
 			<section id="second" class="main">
-				<header>
+				<header id="margin-adjust">
 					<div class="container">
 						<h2>Work History</h2>
 						<p>I am a teacher at the MTC.<br />
 						I also work at H&R Block so let me know if you need help with your taxes.</p>
+
+
+
+						<div class="stuff-to-hide">
+							<p>Hello World!</p>
+							<p>Here is some more information to hide.  Essentially I want this div to disappear when I push the button.</p>
+							<p>Yep</p>
+						</div>
+
 					</div>
+					<div id="reveal-button" class="button reveal-button"><i class="fa fa-chevron-down"></i></div>
+
 				</header>
 				<div class="content dark style2">
 					<div class="container">
@@ -319,10 +329,8 @@
 					</ul>
 				</div>
 			</section>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
+
+
 
 	</body>
 </html>

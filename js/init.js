@@ -1,3 +1,28 @@
+		$(document).ready(function() {
+
+			$('.stuff-to-hide').hide();
+			var test = false;
+			$('.reveal-button').click(function() {
+				
+				if(test === false){
+				$('.stuff-to-hide').slideDown(500);
+				test = true;
+				$('.reveal-button').html('<i class="fa fa-chevron-up"></i>');
+			} else {
+				$('.stuff-to-hide').slideUp(500);
+				test = false;
+				$('.reveal-button').html('<i class="fa fa-chevron-down"></i>');
+			}
+
+			});
+
+
+
+
+		});
+
+
+
 /*
 	Tessellate 1.0 by HTML5 UP
 	html5up.net | @n33co
@@ -79,3 +104,5 @@
 					$('form').n33_formerize();
 
 		});
+
+
