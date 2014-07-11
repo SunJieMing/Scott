@@ -1,3 +1,70 @@
+			var modal = (function(){
+				var 
+				method = {},
+				$overlay,
+				$modal,
+				$content,
+				$close;
+
+				// Center the modal in the viewport
+				method.center = function () {
+					var top, left;
+
+					top = Math.max($(window).height() - $modal.outerHeight(), 0) / 2;
+					left = Math.max($(window).width() - $modal.outerWidth(), 0) / 2;
+
+					$modal.css({
+						top:top + $(window).scrollTop(), 
+						left:left + $(window).scrollLeft()
+					});
+				};
+
+				// Open the modal
+				method.open = function (settings) {
+					//$content.empty().append(settings.content);
+
+					$modal.css({
+						width: settings.width || 'auto', 
+						height: settings.height || 'auto'
+					});
+
+					method.center();
+					$(window).bind('resize.modal', method.center);
+					$modal.show();
+					$overlay.show();
+				};
+
+				// Close the modal
+				method.close = function () {
+					$modal.hide();
+					$overlay.hide();
+					$content.empty();
+					$(window).unbind('resize.modal');
+				};
+
+				// Generate the HTML and add it to the document
+				$overlay = $('<div id="overlay"></div>');
+				$modal = $('<div id="modal"><iframe src="http://www.youtube.com/embed/443Vy3I0gJs"></iframe></div>');
+				$content = $('<div id="content"></div>');
+				$close = $('<a id="close"></a>');
+
+				$modal.hide();
+				$overlay.hide();
+				$modal.append($content, $close);
+
+				$(document).ready(function(){
+					$('body').append($overlay, $modal);						
+				});
+
+				$close.click(function(e){
+					e.preventDefault();
+					method.close();
+				});
+
+				return method;
+			}());
+
+
 		$(document).ready(function() {
 
 			$('.stuff-to-hide').hide();
@@ -14,24 +81,81 @@
 				$('.reveal-button').html('<i class="fa fa-chevron-down"></i>');
 			}
 
+			//------------------------------------------
+
 			});
 
+				// $.get('ajax.html', function(data){
+				// 	modal.open({content: data});
+				// });
+
+				// $('#howdy').click(function(e){
+				// 	modal.open({content: $(this).text});
+				// 	e.preventDefault();
+				// });
+
+		var urlObject = {
+			urlArray1: 'http://www.youtube.com/embed/443Vy3I0gJs'
+		};
+
+
+					$('#video').hide();
+					$('#overlay').hide();
+					$('.movie-description').hide();
+
+					$('.movie-description').click(function(){
+
+						var thisClass = $('#frame').attr("class");
+						
+						if(!$('#frame').attr('src')){
+							for(key in urlObject){
+								if(thisClass === key){
+									$('#frame').attr('src', urlObject[key]);
+								}
+							}
+						}
+
+						$('#overlay').fadeIn('fast');
+						$('#video').show('fast');
+
+					});
+
+					$('#video-button').click(function(){
+						$('#overlay').fadeOut('fast');
+						$('#video').hide('fast');
+						$('#frame').attr('src', '');
+					});
+
+					$('#howdy').mouseenter(function(){
+						$('.movie-description').slideDown(250);
+					});
+
+					$('.movie-description').mouseleave(function(){
+						setTimeout(exitSlide, 200);
+					});
+
+					var exitSlide = function(){
+						$('.movie-description').slideUp(250);
+					}
+
+					$('#reveal-button').mouseenter(function(){
+						$('#reveal-button').css('background-color','rgba(0,0,0,0.025)');
+					});
+
+					$('#reveal-button').mouseleave(function(){
+						$('#reveal-button').css('background-color','none');
+					});
+
+});
 
 
 
-		});
+
+//---------------------------------------------
 
 
 
-/*
-	Tessellate 1.0 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
-/*********************************************************************************/
-/* Settings                                                                      */
-/*********************************************************************************/
 
 	var _settings = {
 
@@ -104,5 +228,7 @@
 					$('form').n33_formerize();
 
 		});
+
+
 
 
