@@ -1250,9 +1250,11 @@
 			{
 				margin: 2em 0 0 0;
 				padding: 0;
-				text-align: center;
+				text-align: left;
 			}
-
+			.main > header a {
+				color: blue;
+			}
 		.main > .content
 		{
 			padding: 6em 0 6em 0;
@@ -1439,24 +1441,16 @@ width: 100%;
     right:-95px;
 }
 
-.image-thumbnail {
-	z-index: 0;
-	background: blue;
-	width: 120px;
-	height: 90px;
+
+
+.video-row{
+	padding-top: 7%;
+}
+#bottom-video-row{
+	padding-bottom: 7%;
 }
 
-.movie-description {
-	background: rgba(34, 34, 34, 0.7);
-	color: white;
-	font-size: 10pt;
-	z-index: 1;
-  width: 120px;
-  height: 90px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+
 
 .reference-container {
 	clear:both;
@@ -1492,6 +1486,74 @@ width: 100%;
 }
 
 
+.movie-description {
+	background: rgba(34, 34, 34, 0.7);
+	color: white;
+	font-size: 10pt;
+	z-index: 1;
+  width: 120px;
+  height: 90px;
+  position: absolute;
+	margin-left: 25%;
+	margin-top: 7%;
+	
+/*  top: 0;
+  left: 0;*/
+}
+
+.image-thumbnail {
+	z-index: 0;
+	width: 120px;
+	height: 90px;
+	display: inline;
+	margin-left: 25%;
+}
+
+#vid1 {
+
+}
+#vid2{}
+#vid3{}
+#vid4{}
+#vid1-description{
+	top: 0;
+	left: 0;
+	margin-left: 25%;
+	display:inline;
+}
+#vid2-description{
+	top:10;
+	left:10;
+	margin-left: 25%;
+	display:inline;
+}
+#vid3-description{
+	top: 0;
+	left: 0;
+	margin-left: 25%;
+	display:inline;
+}
+#vid4-description{
+	top:10;
+	left:10;
+	margin-left: 25%;	
+	display:inline;
+}
+
+#test-row{
+
+}
+#test-box{
+	background: red;
+	width: 100px;
+	height: 100px;
+	margin-left: 15%;
+	float: left;
+	display: inline;
+}
+#test-container{
+	margin-bottom: 10%;
+}
 
 
 
