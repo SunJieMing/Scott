@@ -1346,7 +1346,7 @@
 position: fixed;
 float: left;
 z-index: 100;
-background-color: rgba(182, 134, 84, 0.4);
+background-color: rgba(190,162,133, .4);
 width: 100%;
 }
 #top-bar .nav-container {
