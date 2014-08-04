@@ -1,3 +1,47 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 @charset 'UTF-8';
 
 @font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
@@ -21,8 +65,8 @@
 		font-weight: 300;
 		font-size: 17pt;
 		line-height: 1.75em;
-		color: #888;
 		-webkit-text-stroke: 0.1px;
+		color: #888;
 	}
 
 	h1,h2,h3,h4,h5,h6
@@ -117,14 +161,13 @@
 	
 	blockquote
 	{
-		border-left: solid 0.25em #e6e6e6;
 		padding: 1em 0 1em 2em;
+		border-left: solid 0.25em #e6e6e6;
 		font-style: italic;
 	}
 
 		.dark blockquote
-		{
-			border-left-color: rgba(255,255,255,0.5);
+		{border-left-color:rgba(255,255,255,0.5);
 		}
 	
 	p, ul, ol, dl, table
@@ -189,8 +232,7 @@
 		
 		section > :last-child,
 		article > :last-child
-		{
-			margin-bottom: 0;
+		{margin-bottom:0;
 		}
 
 		section:last-child,
@@ -713,9 +755,7 @@
 	/* Dark */
 
 		.dark
-		{
-			color: #aaa;
-			color: rgba(255,255,255,0.65);
+		{color:rgba(255,255,255,0.65);
 		}
 			
 /*********************************************************************************/
@@ -1214,6 +1254,7 @@
 				padding: 0;
 				font-size: 1.25em;
 				line-height: 1.5em;
+				text-align: center;
 			}
 			
 		.header footer
@@ -1253,7 +1294,7 @@
 				text-align: left;
 			}
 			.main > header a {
-				color: blue;
+				color: #00688B;
 			}
 		.main > .content
 		{
@@ -1316,6 +1357,7 @@
 		text-align: center;
 		padding: 4em 0 8em 0;
 		box-shadow: inset 0 1px 0 0 #e6e6e6;
+		clear: both;
 	}
 	
 		#footer .copyright
@@ -1326,8 +1368,7 @@
 		}
 		
 			#footer .copyright a
-			{
-				color: inherit;
+			{color:#00688B;
 			}
 			
 		#footer ul.icons
@@ -1443,8 +1484,7 @@ width: 100%;
 
 
 
-.video-row{
-	padding-top: 7%;
+.video-row{padding-top:6%;
 }
 #bottom-video-row{
 	padding-bottom: 7%;
@@ -1469,8 +1509,9 @@ width: 100%;
 	margin-left: 4%;
 	margin-top: 1%;
 	margin-bottom: 0;
-	border-left: 10px solid #BEA285;
+	border-left: 10px solid rgba(255,255,255,0.5);
 	padding: 10px 15px;
+	font-style: italic;
 }
 
 #row-container {
@@ -1482,7 +1523,7 @@ width: 100%;
 	width: 8%;
 	text-align: center;
 	margin-top: 7%;
-	color: whitesmoke;
+	color: #e1e1e1;
 }
 
 
@@ -1503,10 +1544,9 @@ width: 100%;
 
 .image-thumbnail {
 	z-index: 0;
-	width: 120px;
-	height: 90px;
+	width: 200px;
+	height: 150px;
 	display: inline;
-	margin-left: 25%;
 }
 
 #vid1 {
@@ -1518,25 +1558,25 @@ width: 100%;
 #vid1-description{
 	top: 0;
 	left: 0;
-	margin-left: 25%;
-	display:inline;
+	display: inline;
+	float: left;
+	z-index: 10;
+	position: absolute;
 }
 #vid2-description{
 	top:10;
 	left:10;
-	margin-left: 25%;
 	display:inline;
+	float:left;
 }
 #vid3-description{
 	top: 0;
 	left: 0;
-	margin-left: 25%;
 	display:inline;
 }
 #vid4-description{
 	top:10;
-	left:10;
-	margin-left: 25%;	
+	left:10;	
 	display:inline;
 }
 
@@ -1555,7 +1595,24 @@ width: 100%;
 	margin-bottom: 10%;
 }
 
+.performance-header-background{
+	background-color: rgba(54, 69, 79, .5);
+	width: 20%;
+	padding: 1%;
+	border-radius: 0.25em;
+	margin-left: 15%;
+}
 
+.performance-image-container {margin-left:5%;margin-right:5%;padding-top:2%;;
 
+}
 
-
+.performance-image {height:49%;width:49%;float:left;margin:.1%;
+	
+}
+.single-vid{width:50%;margin:none;float:left;padding:none;
+	
+}
+.vid-thumbnail {position:absolute;
+	
+}
