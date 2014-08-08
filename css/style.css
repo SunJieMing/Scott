@@ -177,7 +177,6 @@ table {
 	
 	p
 	{
-		text-align: justify;
 	}
 
 	header
@@ -662,7 +661,6 @@ table {
 			{
 				background: rgba(255,255,255,0.15);
 				box-shadow: inset 0 0 0 1px #fff;
-				color: #fff;
 			}
 			
 				.dark .button:hover
@@ -1196,11 +1194,11 @@ table {
 		margin: 0;
 		background: url('../images/IMG_5697.jpg');
 		background-size: cover;
-		background-position: 50% 20%;
-		padding: 14em 0 14em 0;
 		text-align: center;
 		color: #fff;
 		min-height:100%;
+		background-position:50% 20%;
+		padding:14em 0 14em 0;
 	}
 
 		#header-performance
@@ -1615,4 +1613,12 @@ width: 100%;
 }
 .vid-thumbnail {position:absolute;
 	
+}
+#film-header {
+	background: url('../images/film-cover.jpg');
+	background-size: cover;
+	background-position: 50%;
+}
+#film-p{
+	text-align: center;
 }
