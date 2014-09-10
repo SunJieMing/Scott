@@ -11,7 +11,11 @@
   <script src="js/skel.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/magnific.js"></script>
-  <script src="js/jquery.reveal.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/jquery.reveal.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/modal.controller.js"></script>
 
   <noscript>
     <link rel="stylesheet" href="css/skel-noscript.css" />
@@ -24,7 +28,7 @@
   <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
   <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 </head>
-<body>
+<body ng-app="myApp">
 
   <!-- Header -->
   <nav class="navbar navbar-default navbar-fixed-bottom" id="top-bar"role="navigation">
@@ -66,8 +70,41 @@
     <section id="second" class="main">
 
 
-      <div class="movie-container">
 
+
+      <div class="movie-container">
+        <div ng-controller="ModalDemoCtrl">
+
+            <script type="text/ng-template" id="myModalContent.html">
+                <div class="modal-header">
+                    <h3 class="modal-title">Im a modal!</h3>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li ng-repeat="item in items">
+                            <a ng-click="selected.item = item">{{ item }}</a>
+                        </li>
+                    </ul>
+                    Selected: <b>{{ selected.item }}</b>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="ok()">OK</button>
+                    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                </div>
+            </script>
+
+            <button class="btn btn-default" ng-click="open()">Open me!</button>
+            <button class="btn btn-default" ng-click="open('lg')">Large modal</button>
+            <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+            <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+        </div>
+
+
+
+
+
+      </div><!--movie container-->
+<!--
         <div class="row">
           <div class="col-xs-6 col-md-3">
             <a href="#" class="thumbnail">
@@ -93,7 +130,7 @@
             <img class="film-thumb" data-src="http://www.realsaltlake.com/sites/saltlake/files/imagecache/140x80/image_nodes/2014/07/beltran%20v%20la.jpg" alt="...">
           </a>
         </div>
-        </div>
+        </div> -->
 
 <!--         <div id="overlay"></div>
 
@@ -126,7 +163,7 @@
             </div> 
           </div>
  -->        
-      </div>
+<!--       </div> -->
 
 
 

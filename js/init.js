@@ -163,5 +163,3 @@ var _settings = {
 		});
 
 
-
-
